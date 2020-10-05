@@ -13,7 +13,7 @@ pipeline {
         stage('Clone github repo') {
             steps {
                 echo 'Clone github repo..'
-                sh ''
+                sh 'git clone https://github.com/Rutuja-haridas1996/CI_CD-pipeline-Jenkins.git'
 
             }
         }
