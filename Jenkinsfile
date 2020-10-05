@@ -6,7 +6,8 @@ pipeline {
         stage('Make directory') {
             steps {
                 echo 'Make directory..'
-                sh 'mkdir new_jenkins_project'
+                sh 'mkdir new_jenkins_project_1'
+                sh 'pwd'
 
             }
         }
