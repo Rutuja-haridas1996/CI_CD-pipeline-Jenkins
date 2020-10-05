@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Define bash') {
+        stage('Install Flask') {
             steps {
                 echo 'Checkout..'
-                sh '#!/bin/bash'
+                sh 'pip install Flask'
 
             }
         }
 
-        stage('Checkout to Venv') {
+        stage('Run Test file') {
             steps {
                 echo 'Checkout..'
                 sh 'python test.py'
