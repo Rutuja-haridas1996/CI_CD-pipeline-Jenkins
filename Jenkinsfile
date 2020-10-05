@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Install Flask') {
             steps {
-                echo 'Checkout..'
+                echo 'Install Flask..'
                 sh 'pip install Flask'
 
             }
@@ -12,29 +12,20 @@ pipeline {
 
         stage('Run Test file') {
             steps {
-                echo 'Checkout..'
+                echo 'Run Test file..'
                 sh 'python test.py'
 
             }
         }
         stage('Run App file') {
             steps {
-                echo 'Checkout..'
+                echo 'Run App file..'
                 sh 'python app.py'
 
             }
         }
        
 
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying at prod'
-            }
-        }
+        
     }
 }
