@@ -17,10 +17,14 @@ pipeline {
 
             }
         }
+        stage('Run App file') {
+            steps {
+                echo 'Checkout..'
+                sh 'python app.py'
+
+            }
+        }
        
-
-
-
 
         stage('Test') {
             steps {
