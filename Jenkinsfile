@@ -15,36 +15,23 @@ pipeline {
         stage('Make directory') {
             steps {
                 echo 'Make directory..'
-                sh 'mkdir jenkins_project_1_Oct_05_20'
+                sh 'mkdir /home/rutujaharidas/Documents/jenkins_project_1_Oct_05_20'
 
             }
         }
-        stage('Checkout to project folder') {
+        stage('Checkout to project folder and git clone') {
             steps {
                 echo 'checkout to project folder..'
-                sh 'cd jenkins_project_1_Oct_05_20'
-                echo 'Currenet location'
+                sh 'cd /home/rutujaharidas/Documents/jenkins_project_1_Oct_05_20'
+                echo 'Current location'
                 sh 'pwd'
-            }
-        }
-        
-        
-        stage('Clone Github repository') {
-            steps {
-                echo 'Clone Github repo..'
                 sh 'git clone https://github.com/Rutuja-haridas1996/CI_CD-pipeline-Jenkins.git'
-
+                
             }
         }
         
-        stage('Git status') {
-            steps {
-                echo 'Git status..'
-                sh 'git status'
-
-            }
-        }
         
+       
         
         
     }
