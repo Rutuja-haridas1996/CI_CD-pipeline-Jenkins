@@ -3,38 +3,20 @@ pipeline {
 
     stages {
         
-        stage('Create virtual environment') {
+        stage('Make directory') {
             steps {
-                echo 'Create virtual environment..'
-                sh 'python3 -m venv /home/rutujaharidas/PycharmProjects/jenkins_3/CI_CD-pipeline-Jenkins/env'
+                echo 'Make directory..'
+                sh 'mkdir new_jenkins_project'
 
             }
         }
-        stage('Activate virtual environment') {
+        stage('Clone github repo') {
             steps {
-                echo 'Activate virtual environment..'
-                sh '. /home/rutujaharidas/PycharmProjects/jenkins_3/CI_CD-pipeline-Jenkins/env/bin/activate'
+                echo 'Clone github repo..'
+                sh ''
 
             }
         }
-        stage('Install Flask') {
-            steps {
-                echo 'Install Flask..'
-                sh 'pip install Flask'
-
-            }
-        }
-        
-        
-        stage('Run Test file') {
-            steps {
-                echo 'Run App file..'
-                sh 'python test.py'
-
-            }
-        }
-       
-
         
     }
 }
