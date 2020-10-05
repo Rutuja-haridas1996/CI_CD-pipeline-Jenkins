@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout...') {
             steps {
                 echo 'Checkout to Documents folder..'
-                sh 'cd /var/lib/jenkins/workspace/Pipeline\ Project-Demo/jenkins_project_1_Oct_05_20'
+                sh 'cd "/var/lib/jenkins/workspace/Pipeline" "Project-Demo/jenkins_project_1_Oct_05_20"'
                 echo 'Current location : '
                 sh 'pwd'
             }
