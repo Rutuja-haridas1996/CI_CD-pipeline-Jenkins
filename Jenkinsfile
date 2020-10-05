@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout...') {
             steps {
                 echo 'Checkout to Documents folder..'
-                sh 'cd /home/rutujaharidas/Documents'
+                sh 'cd home/rutujaharidas/Documents'
                 echo 'Current location : '
                 sh 'pwd'
             }
@@ -15,7 +15,7 @@ pipeline {
         stage('Make directory') {
             steps {
                 echo 'Make directory..'
-                sh 'mkdir -p /home/rutujaharidas/Documents/jenkins_project_1_Oct_05_20'
+                sh 'mkdir -p home/rutujaharidas/Documents/jenkins_project_1_Oct_05_20'
 
             }
         }
