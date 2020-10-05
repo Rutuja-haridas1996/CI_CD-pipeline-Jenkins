@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh """
-                cd venv/bin
+                cd /home/rutujaharidas/PycharmProjects/jenkins_3/CI_CD-pipeline-Jenkins/venv/bin/
                 source activate
                 cd ..
                 cd ..
