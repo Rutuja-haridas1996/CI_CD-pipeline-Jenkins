@@ -1,12 +1,19 @@
 pipeline {
     agent any
-     environment {
-        AUTHOR = 'Vivek vishwakarma'
-    }
+
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh """
+                cd venv/bin
+                source activate
+                cd ..
+                cd ..
+                python test.py
+
+                """
+
             }
         }
         stage('Test') {
