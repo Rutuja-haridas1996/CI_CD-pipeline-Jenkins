@@ -13,17 +13,11 @@ pipeline {
         stage('Checkout to Venv') {
             steps {
                 echo 'Checkout..'
-                sh 'cd /home/rutujaharidas/PycharmProjects/jenkins_3/CI_CD-pipeline-Jenkins'
+                sh 'python test.py'
 
             }
         }
-        stage('Starting virtual environment') {
-            steps {
-                echo 'Checkout..'
-                sh '. ./venv/bin/activate'
-
-            }
-        }
+       
 
 
 
