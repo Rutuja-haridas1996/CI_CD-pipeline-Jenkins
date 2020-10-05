@@ -9,6 +9,15 @@ pipeline {
 
             }
         }
+        stage('Starting virtual environment') {
+            steps {
+                echo 'Checkout..'
+                sh '. activate'
+
+            }
+        }
+
+
 
 
         stage('Test') {
