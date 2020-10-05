@@ -5,14 +5,14 @@ pipeline {
         stage('Checkout to Venv') {
             steps {
                 echo 'Checkout..'
-                sh 'cd /home/rutujaharidas/PycharmProjects/jenkins_3/CI_CD-pipeline-Jenkins/venv/bin/'
+                sh 'cd /home/rutujaharidas/PycharmProjects/jenkins_3/CI_CD-pipeline-Jenkins'
 
             }
         }
         stage('Starting virtual environment') {
             steps {
                 echo 'Checkout..'
-                sh '. activate'
+                sh '. ./venv/bin/activate'
 
             }
         }
