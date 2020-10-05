@@ -6,14 +6,14 @@ pipeline {
         stage('Create virtual environment') {
             steps {
                 echo 'Create virtual environment..'
-                sh 'python3 -m venv venv'
+                sh 'python3 -m venv /home/rutujaharidas/PycharmProjects/jenkins_3/CI_CD-pipeline-Jenkins/env'
 
             }
         }
         stage('Activate virtual environment') {
             steps {
                 echo 'Activate virtual environment..'
-                sh '. venv/bin/activate'
+                sh '. /home/rutujaharidas/PycharmProjects/jenkins_3/CI_CD-pipeline-Jenkins/env/bin/activate'
 
             }
         }
