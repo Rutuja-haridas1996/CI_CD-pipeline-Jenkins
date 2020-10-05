@@ -2,7 +2,13 @@ pipeline {
     agent any
 
     stages {
-        
+        stage('Build') {
+            steps {
+                echo 'Build..'
+                sh 'build'
+
+            }
+        }
 
         stage('Create virtual environment') {
             steps {
