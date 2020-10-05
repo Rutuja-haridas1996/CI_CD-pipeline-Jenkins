@@ -1,14 +1,22 @@
 pipeline {
-    agent { docker { image 'python:3.7.2' } }
+    agent any
+     environment {
+        AUTHOR = 'Vivek vishwakarma'
+    }
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'pip install flask
+                echo 'Building..'
             }
         }
-        stage('test') {
+        stage('Test') {
             steps {
-                sh 'python test.py'
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying at prod'
             }
         }
     }
