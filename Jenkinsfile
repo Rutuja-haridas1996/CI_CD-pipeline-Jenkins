@@ -2,6 +2,22 @@ pipeline {
     agent any
 
     stages {
+        
+
+        stage('Create virtual environment') {
+            steps {
+                echo 'Create virtual environment..'
+                sh 'python3 -m venv venv'
+
+            }
+        }
+        stage('Activate virtual environment') {
+            steps {
+                echo 'Activate virtual environment..'
+                sh '. venv/bin/activate'
+
+            }
+        }
         stage('Install Flask') {
             steps {
                 echo 'Install Flask..'
@@ -9,18 +25,12 @@ pipeline {
 
             }
         }
-
+        
+        
         stage('Run Test file') {
             steps {
-                echo 'Run Test file..'
-                sh 'python test.py'
-
-            }
-        }
-        stage('Run App file') {
-            steps {
                 echo 'Run App file..'
-                sh 'python app.py'
+                sh 'python test.py'
 
             }
         }
