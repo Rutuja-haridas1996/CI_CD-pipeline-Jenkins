@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout...') {
             steps {
                 echo 'Checkout to Documents folder..'
-                sh 'cd home/rutujaharidas/Documents'
+                sh 'cd /home/rutujaharidas/Documents'
                 echo 'Current location : '
                 sh 'pwd'
             }
