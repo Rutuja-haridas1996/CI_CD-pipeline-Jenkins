@@ -15,7 +15,7 @@ pipeline {
         stage('Make directory') {
             steps {
                 echo 'Make directory..'
-                sh 'mkdir /home/rutujaharidas/Documents/jenkins_project_1_Oct_05_20'
+                sh 'mkdir -v -p /home/rutujaharidas/Documents/jenkins_project_1_Oct_05_20'
 
             }
         }
