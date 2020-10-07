@@ -5,10 +5,9 @@ pipeline {
         stage('Checkout...') {
             steps {
                 echo 'Checkout to Documents folder..'
-                sh 'cd /home/rutujaharidas/Documents' 
                 sh 'ls -l'
-                dir("${DOC_WORKSPACE}"){
-    sh "pwd"
+                dir("${env.DOC_WORKSPACE}"){
+                    sh "pwd"
                                 }
 
         }
