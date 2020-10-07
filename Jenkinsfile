@@ -7,7 +7,7 @@ pipeline {
                 echo 'Checkout to Documents folder..'
                 sh 'cd /home/rutujaharidas/Documents' 
                 sh 'ls -l'
-                dir("${env.DOC_WORKSPACE}/aQA"){
+                dir("${DOC_WORKSPACE}/new_folder"){
     sh "pwd"
                                 }
 
