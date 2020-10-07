@@ -1,5 +1,6 @@
 // Define variable
-def myVariable = "foo"
+//def myVariable = "foo"
+def doc_workspace = "/home/rutujaharidas/Documents"
 
 
 
@@ -10,7 +11,10 @@ pipeline {
         stage('Checkout...') {
             steps {
                 echo 'Checkout to Documents folder..'
-                echo "${myVariable}"
+                echo "${doc_workspace}"
+                sh 'dir("${doc_workspace}/aQA"){
+                    sh "pwd"
+                }'
             }
 
         }
