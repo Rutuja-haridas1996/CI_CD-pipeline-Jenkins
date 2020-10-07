@@ -1,3 +1,8 @@
+// Define variable
+def myVariable = "foo"
+
+
+
 pipeline {
     agent any
 
@@ -5,7 +10,7 @@ pipeline {
         stage('Checkout...') {
             steps {
                 echo 'Checkout to Documents folder..'
-                echo "${DOC_WORKSPACE}"
+                echo "${myVariable}"
             }
 
         }
