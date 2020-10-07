@@ -11,10 +11,7 @@ pipeline {
         stage('Checkout...') {
             steps {
                 echo 'Checkout to Documents folder..'
-                echo "${doc_workspace}"
-               dir("${doc_workspace}/aQA"){
-    sh "pwd"
-}
+                
             }
 
         }
