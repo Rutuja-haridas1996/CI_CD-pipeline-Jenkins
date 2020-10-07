@@ -19,7 +19,7 @@ pipeline {
                 sh 'pip install Flask'
             }
         }
-        stage('Run Test file') {
+        stage('Run Test file 1') {
             steps {
                 echo 'Run App file..'
                 sh 'python test.py'
