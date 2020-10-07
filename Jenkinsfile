@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Checkout to Documents folder..'
                 sh 'ls -l'
-                echo "$DOC_WORKSPACE"
+                echo "${DOC_WORKSPACE}"
             }
 
         }
