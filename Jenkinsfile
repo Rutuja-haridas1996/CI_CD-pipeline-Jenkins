@@ -1,27 +1,20 @@
-// Define variable
-//def myVariable = "foo"
-def doc_workspace = "/home/rutujaharidas/Documents"
-
-
-
 pipeline {
-    agent any
-
+   
     stages {
-        stage('Checkout...') {
+        stage('Build') {
             steps {
-                echo 'Checkout to Documents folder..'
-                
+                echo 'Building..'
             }
-
         }
-        
-        
-        
-        
-        
-       
-        
-        
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying at prod'
+            }
+        }
     }
 }
