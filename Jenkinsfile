@@ -5,7 +5,8 @@ pipeline {
         stage('Checkout...') {
             steps {
                 echo 'Checkout to Documents folder..'
-                 sh 'ls -l'
+                sh 'cd /home/rutujaharidas/Documents' 
+                sh 'ls -l'
                 dir ('foo') {
                     writeFile file:'dummy', text:''
                 }
