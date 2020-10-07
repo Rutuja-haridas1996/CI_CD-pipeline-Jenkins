@@ -12,9 +12,9 @@ pipeline {
             steps {
                 echo 'Checkout to Documents folder..'
                 echo "${doc_workspace}"
-                sh 'dir("${doc_workspace}/aQA"){
+                dir("{doc_workspace}/new_folder") {
                     sh "pwd"
-                }'
+                    }
             }
 
         }
