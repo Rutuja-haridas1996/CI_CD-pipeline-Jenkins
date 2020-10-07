@@ -7,7 +7,7 @@ pipeline {
                 echo 'Checkout to Documents folder..'
                 sh 'cd /home/rutujaharidas/Documents' 
                 sh 'ls -l'
-                dir ('foo') {
+                dir ('/home/rutujaharidas/Documents/foo') {
                     writeFile file:'dummy', text:''
                 }
                 sh 'ls -l'
