@@ -32,13 +32,14 @@ pipeline {
                 sh 'python test.py'
             }
         }
-        
-        stage('Run App file 1') {
+        stage('Build automatically..') {
             steps {
-                echo 'Run App file..'
-                sh 'python app.py'
+                echo 'Build automatically..'
+              
             }
         }
+        
+        
         
         
 
