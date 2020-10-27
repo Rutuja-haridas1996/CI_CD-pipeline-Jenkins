@@ -25,12 +25,13 @@ pipeline {
                 sh 'python test.py'
             }
         }
-    }
-    stage('Run Python file') {
+        stage('Run App file 1') {
             steps {
                 echo 'Run App file..'
                 sh 'python app.py'
             }
         }
+
     }
+
 }
