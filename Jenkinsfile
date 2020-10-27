@@ -32,12 +32,7 @@ pipeline {
                 sh 'python test.py'
             }
         }
-        stage('Build automatically..') {
-            steps {
-                echo 'Build automatically..'
-              
-            }
-        }
+      
         
         
         
