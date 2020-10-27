@@ -32,12 +32,7 @@ pipeline {
                 sh 'python test.py'
             }
         }
-        stage('Dummy Jenkins...') {
-            steps {
-                echo 'Dummy Jenkins...'
-              
-            }
-        }
+        
         stage('Run App file 1') {
             steps {
                 echo 'Run App file..'
