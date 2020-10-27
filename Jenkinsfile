@@ -32,12 +32,6 @@ pipeline {
             }
         }
         
-        stage('Get current path') {
-            steps {
-                echo 'Get current path..'
-                sh 'pwd'
-            }
-        }
 
     }
 
