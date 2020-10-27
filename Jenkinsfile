@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages {
+        stage('Check Path') {
+            steps {
+                echo 'Check Path..'
+                sh 'pwd'
+            }
+        }
+
         stage('Create virtual environment') {
             steps {
                 echo 'Create virtual environment..'
