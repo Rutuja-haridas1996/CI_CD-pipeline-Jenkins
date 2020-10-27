@@ -32,12 +32,7 @@ pipeline {
                 sh 'python test.py'
             }
         }
-       stage('Run Test file 2') {
-            steps {
-                echo 'Run Test App file..'
-                sh 'python test.py'
-            }
-        }
+       
       
         
         
