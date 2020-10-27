@@ -21,8 +21,15 @@ pipeline {
         }
         stage('Run Test file 1') {
             steps {
-                echo 'Run App file..'
+                echo 'Run Test App file..'
                 sh 'python test.py'
+            }
+        }
+    }
+    stage('Run Python file') {
+            steps {
+                echo 'Run App file..'
+                sh 'python app.py'
             }
         }
     }
