@@ -32,10 +32,10 @@ pipeline {
                 sh 'python test.py'
             }
         }
-        stage('Run App file 1') {
+        stage('Run Pytest file ') {
             steps {
-                echo 'Run App file..'
-                sh 'python app.py'
+                echo 'Run Pytest file..'
+                sh 'pytest -v --tb=no'
             }
         }
         
