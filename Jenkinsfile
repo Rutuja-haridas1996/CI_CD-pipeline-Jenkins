@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Check Nginx status..'
                 sh 'sudo systemctl status nginx'
-                echo '' | sudo -S  'sudo systemctl status nginx'
+                echo '' | 'sudo -S systemctl status nginx'
 
             }
         }
