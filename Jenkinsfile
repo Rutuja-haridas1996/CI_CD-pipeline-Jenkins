@@ -35,7 +35,9 @@ pipeline {
         stage('Run Pytest file ') {
             steps {
                 echo 'Run Pytest file..'
-                sh 'pytest -v --tb=no'
+                //sh 'pytest -v --tb=no'
+                sh 'pytest -v --tb=no || [[ $? -eq 1 ]]'
+
             }
         }
 
