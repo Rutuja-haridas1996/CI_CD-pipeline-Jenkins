@@ -4,7 +4,7 @@ pipeline {
         stage('Check Path') {
             steps {
                 echo 'Check Nginx status..'
-                sh 'sudo systemctl status nginx'
+                sh 'ssh -t remotehost sudo systemctl status nginx'
             }
         }
 
