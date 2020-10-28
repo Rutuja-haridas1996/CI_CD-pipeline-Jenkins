@@ -38,7 +38,6 @@ pipeline {
                 sh 'pytest -v --tb=no'
             }
         }
-        
 
     }
 
