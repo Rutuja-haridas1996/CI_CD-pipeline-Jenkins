@@ -7,13 +7,7 @@ pipeline {
                 sh 'sudo systemctl stop nginx'
             }
         }
-        stage('Check Nginx Server') {
-            steps {
-                echo 'Check Nginx status..'
-                sh 'sudo systemctl status nginx'
 
-            }
-        }
         stage('Restart Nginx server') {
             steps {
                 echo 'Restart Nginx status..'
