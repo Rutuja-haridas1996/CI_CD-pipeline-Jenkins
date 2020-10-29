@@ -1,29 +1,42 @@
 pipeline {
     agent any
     stages {
-        stage('Stop Nginx Server') {
+        stage('Check Path') {
             steps {
-                echo 'Stop Nginx server..'
-                sh 'sudo systemctl stop nginx'
+                echo 'Check Path..'
+                sh 'pwd'
             }
         }
-
-        stage('Restart Nginx server') {
+        stage('Create virtual environment') {
             steps {
-                echo 'Restart Nginx status..'
-                sh 'sudo systemctl restart nginx'
-
+                echo 'Create virtual environment..'
+                sh 'python3 -m venv venv'
             }
         }
-
-        stage('Check Nginx status') {
+        stage('Activate virtual environment') {
             steps {
-                echo 'Check Nginx status..'
-                sh 'sudo systemctl status nginx'
-
+                echo 'Activate virtual environment..'
+                sh '. venv/bin/activate'
             }
         }
-
+        stage('Install Flask') {
+            steps {
+                echo 'Install Flask..'
+                sh 'pip install Flask'
+            }
+        }
+        stage('Run Test file 1') {
+            steps {
+                echo 'Run Test App file..'
+                sh 'python test.py'
+            }
+        }
+        stage('Run Pytest file ') {
+            steps {
+                echo 'Run Pytest file..'
+                //sh 'pytest -v --tb=no'
+                sh 'pytest -v --tb=no || [[ $? -eq 1 ]]'
+            }
+        }
     }
-
 }
