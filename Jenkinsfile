@@ -38,5 +38,6 @@ pipeline {
                 sh 'pytest -v --tb=no || [[ $? -eq 1 ]]'
             }
         }
+
     }
 }
