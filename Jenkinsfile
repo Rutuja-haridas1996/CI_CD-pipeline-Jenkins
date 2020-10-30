@@ -18,31 +18,31 @@ pipeline {
 
         stage('Make virtual environment and install requirements') {
             steps {
-                sh 'virtualenv -p python3 vname && . venv/bin/activate && pip uninstall fabric'
-                sh 'pip install fabric3'
+                sh 'virtualenv -p python3 venv && . venv/bin/activate'
+                //sh 'pip install fabric3'
 
                 echo ''
 
             }
         }
 
-        stage('Run Fab file') {
-            input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                submitter "alice,bob"
-                parameters {
-                    string(name: 'HOSTNAME', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                    password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-
-                }
-            }
-            steps {
-                   echo "Hello, ${HOSTNAME}, nice to meet you. ${PASSWORD}"
-                   echo "fab pwd -H ${HOSTNAME} --password=${PASSWORD}"
-                   sh "fab pwd -H ${HOSTNAME} --password=${PASSWORD}"
-            }
-        }
+//         stage('Run Fab file') {
+//             input {
+//                 message "Should we continue?"
+//                 ok "Yes, we should."
+//                 submitter "alice,bob"
+//                 parameters {
+//                     string(name: 'HOSTNAME', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+//                     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+//
+//                 }
+//             }
+//             steps {
+//                    echo "Hello, ${HOSTNAME}, nice to meet you. ${PASSWORD}"
+//                    echo "fab pwd -H ${HOSTNAME} --password=${PASSWORD}"
+//                    sh "fab pwd -H ${HOSTNAME} --password=${PASSWORD}"
+//             }
+//         }
     }
 }
 
