@@ -23,7 +23,7 @@ pipeline {
 //
 //                 sh 'pip install fabric3'
 
-                echo ''
+                sh 'pip3 install paramiko'
 
             }
         }
