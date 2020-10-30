@@ -18,12 +18,13 @@ pipeline {
 
         stage('Make virtual environment and install requirements') {
             steps {
-//                 sh 'python3 -m venv venv'
-//                 sh '. venv/bin/activate'
+                sh 'python3 -m venv venv'
+                sh '. venv/bin/activate'
+                sh 'pip install -r requirements.txt'
 //
 //                 sh 'pip install fabric3'
 
-                sh 'pip3 install paramiko'
+                //sh 'pip3 install paramiko'
 
             }
         }
