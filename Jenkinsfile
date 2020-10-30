@@ -18,8 +18,10 @@ pipeline {
 
         stage('Make virtual environment and install requirements') {
             steps {
-                sh 'virtualenv -p python3 venv && . venv/bin/activate'
-                //sh 'pip install fabric3'
+                sh 'python3 -m venv venv'
+                sh '. venv/bin/activate'
+
+                sh 'pip install fabric3'
 
                 echo ''
 
