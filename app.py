@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
+    app.logger.debug('Logger')
     return 'Hello World!\n'
 
 
